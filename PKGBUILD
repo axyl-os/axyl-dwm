@@ -7,7 +7,7 @@ pkgdesc="dwm configuration for Axyl OS"
 arch=('x86_64')
 url="https://github.com/axyl-os/axyl-dwm"
 license=('MIT')
-depends=(gcr webkit2gtk sh glibc coreutils libx11 libxinerama libxft freetype2 axyl-fonts)
+depends=(gcr webkit2gtk sh glibc coreutils libx11 libxinerama libxft freetype2 axyl-fonts axyl-dmenu-git axyl-dwmblocks-git feh)
 makedepends=(git make)
 conflicts=(dwm)
 provides=("${pkgname}")
@@ -31,10 +31,10 @@ package() {
 
     # Copies dwm.desktop xsession entry
     mkdir -p ${pkgdir}/usr/share/xsessions
-    install -Dm644 ${srcdir}/dwm.desktop         "${pkgdir}/usr/share/xsessions/"
+    install -Dm644 ${srcdir}/${pkgname}/dwm.desktop         "${pkgdir}/usr/share/xsessions/"
 
     # Moves dwm configurations
-    mv ${srcdir}/dwm-configs/*       "${_dwmdir}"
+    mv ${srcdir}/${pkgname}/dwm-configs/*       "${_dwmdir}"
     
     # Copies dwm
     mkdir -p ${pkgdir}/opt/${pkgname}
