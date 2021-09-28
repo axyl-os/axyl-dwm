@@ -28,6 +28,10 @@ package() {
     # make the directories
     mkdir -p "${_skeldir}" && mkdir -p "${_dwmdir}"
 
+    # Copies dwm.desktop xsession entry
+    mkdir -p ${pkgdir}/usr/share/xsessions
+    cp -f ${srcdir}/dwm.desktop         "${pkgdir}/usr/share/xsessions/"
+
     # Copies dwm configurations
     cp -r ${srcdir}/dwm-configs/*       "${_dwmdir}"
     
