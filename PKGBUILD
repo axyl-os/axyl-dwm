@@ -7,12 +7,12 @@ pkgdesc="dwm configuration for Axyl OS"
 arch=('x86_64')
 url="https://github.com/axyl-os/axyl-dwm"
 license=('MIT')
-depends=(gcr webkit2gtk sh glibc coreutils libx11 libxinerama libxft freetype2 axyl-fonts axyl-dmenu-git axyl-dwmblocks-git feh)
+depends=(gcr webkit2gtk sh glibc coreutils libx11 libxinerama libxft freetype2 axyl-fonts)
 makedepends=(git make)
 conflicts=(dwm)
 provides=("${pkgname}")
 options=(!strip !emptydirs)
-source=(${pkgname}::"git+$url.git")
+source=("git+$url.git")
 md5sums=('SKIP')
 
 build() {
@@ -23,21 +23,9 @@ build() {
 package() {
     cd "${pkgname}"
 
-    local _skeldir=${pkgdir}/etc/skel
-    local _dwmdir=${_skeldir}/.dwm
-
-    # make the directories
-    mkdir -p "${_skeldir}" && mkdir -p "${_dwmdir}"
-
-    # Copies dwm.desktop xsession entry
-    mkdir -p ${pkgdir}/usr/share/xsessions
-    install -Dm644 ${srcdir}/${pkgname}/dwm.desktop         "${pkgdir}/usr/share/xsessions/"
-
-    # Moves dwm configurations
-    mv ${srcdir}/${pkgname}/dwm-configs/*       "${_dwmdir}"
-    
-    # Copies dwm
     mkdir -p ${pkgdir}/opt/${pkgname}
-    cp -rf ${srcdir}/* ${pkgdir}/opt/${pkgname}
-    make PREFIX=/usr DESTDIR="${pkgdir}" install    
+    mkdir -p ${pkgdir}/usr/share/xsessions/
+    cp -rf * ${pkgdir}/opt/${pkgname}
+    make PREFIX=/usr DESTDIR="${pkgdir}" install
+    install -Dm644 "${srcdir}/${pkgname}/dwm.desktop" "$pkgdir/usr/share/xsessions/dwm.desktop"
 }
