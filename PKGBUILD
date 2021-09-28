@@ -16,7 +16,7 @@ source=("git+$url.git")
 md5sums=('SKIP')
 
 build() {
-    cd "${pkgname}"
+    cd "${pkgname}/dwm"
     make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
 }
 
@@ -27,7 +27,7 @@ package() {
     mkdir -p ${pkgdir}/usr/share/xsessions/
     mkdir -p ${pkgdir}/etc/skel/
     mv dwm-configs/ ${pkgdir}/etc/skel/.dwm/
-    cp -rf dwm/* ${pkgdir}/opt/${pkgname}
+    cp -rf * ${pkgdir}/opt/${pkgname}
     make PREFIX=/usr DESTDIR="${pkgdir}" install
     install -Dm644 "${srcdir}/${pkgname}/dwm.desktop" "$pkgdir/usr/share/xsessions/dwm.desktop"
 }
