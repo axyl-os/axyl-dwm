@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+# terminal emulator for dwm
+alacritty --config-file ~/.dwm/alacritty/alacritty.yml -e fish

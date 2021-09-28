@@ -89,15 +89,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", "#0b0d0a", "-nf", "#d2e9f0", "-sb", "#93a3a8", "-sf", "#d2e9f0", "-p", "Run Command:", NULL };
-static const char *j4dmenu[]  = { "j4-dmenu-desktop", "--no-generic", "--term='alacritty'", "--dmenu=dmenu -p 'Run App:' -c -i -l 10 -nb '#0b0d0a' -nf '#d2e9f0' -sb '#93a3a8' -sf '#d2e9f0' -fn 'Source Code Pro Medium:size=12'", NULL };
-static const char *termcmd[]  = { "alacritty", "--config-file=/home/kungger/.dwm/alacritty/alacritty.yml", "-e", "fish", NULL };
-static const char *browsercmd[] = { "firefox", NULL };
-static const char *lockscreen[] = { "./.dwm/scripts/lock", NULL };
-static const char *editconfigs[] = { "./.dwm/scripts/dmedit-configs", NULL };
-static const char *quicklinks[] = { "./.dwm/scripts/dmquick-links", NULL };
-static const char *rangercmd[] = { "alacritty", "-e", "ranger", NULL };
+static const char *dmenucmd[] = { "/opt/axyl-dwm/bin/dwm-dmenu", NULL };
+static const char *j4dmenu[]  = { "/opt/axyl-dwm/bin/dwm-j4-dmenu-desktop", NULL };
+static const char *termcmd[]  = { "/opt/axyl-dwm/bin/dwm-terminal", NULL };
+static const char *lockscreen[] = { "/opt/axyl-dwm/bin/dwm-lock", NULL };
+static const char *editconfigs[] = { "/opt/axyl-dwm/bin/dmedit-configs", NULL };
+static const char *quicklinks[] = { "/opt/axyl-dwm/bin/dmquick-links", NULL };
 static const char *thunarcmd[] = { "thunar", NULL };
+static const char *browsercmd[] = { "firefox", NULL };
 
 /* volume controls */
 static const char *upvol[]   = { "volume-up", NULL };
