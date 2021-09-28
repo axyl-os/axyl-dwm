@@ -16,7 +16,7 @@ source=("git+$url.git")
 md5sums=('SKIP')
 
 build() {
-    cd "${pkgname}/dwm"
+    cd "${pkgname}"
     make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
 }
 
