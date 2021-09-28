@@ -113,7 +113,6 @@ static Key keys[] = {
     { MODKEY,                       XK_minus, spawn, {.v = downvol } },
     { MODKEY,                       XK_0, spawn, {.v = mutevol } }, */
     { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunarcmd } },
-    { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = rangercmd } },
     { ALTKEY,                       XK_l,      spawn,          {.v = quicklinks } },
     { ALTKEY,                       XK_e,      spawn,          {.v = editconfigs } },
     { ControlMask|ALTKEY,           XK_l,      spawn,          {.v = lockscreen } },
