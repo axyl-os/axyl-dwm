@@ -2,4 +2,4 @@
 
 # script for dwm's dmenu
 
-dmenu_run -c -l 10 -i -fn "Source Code Pro Medium:size=10" -nb "#0b0d0a" -nf "#d2e9f0" -sb "#93a3a8" -sf "#d2e9f0" -p "Run Command:"
+dmenu_run -c -l 10 -i -fn "Source Code Pro Medium:size=12" -nb "#0b0d0a" -nf "#d2e9f0" -sb "#93a3a8" -sf "#d2e9f0" -p "Run Command:"

@@ -1,4 +1,12 @@
 #!/bin/env bash
 
 # terminal emulator for dwm
-alacritty --config-file ~/.dwm/alacritty/alacritty.yml -e fish
+term="alacritty --config-file $HOME/.dwm/alacritty/alacritty.yml"
+
+if [[ $1 == "zsh" ]]; then
+    $term -e zsh
+elif [[ $1 == "fish" ]]; then
+    $term -e fish
+else
+    $term
+fi

@@ -10,7 +10,7 @@ DEF_EDITOR="vim"
 BG="#0b0d0a"
 FG="#d2e9f0"
 ALT_BG="#93a3a8"
-FONT="Source Code Pro Medium:size=10"
+FONT="Source Code Pro Medium:size=12"
 
 # list of configs
 declare -a options=(
