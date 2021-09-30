@@ -17,13 +17,13 @@ static const char *fonts[]          = { "Source Code Pro Medium:size=12", "Iosev
 static const char dmenufont[]       = "Source Code Pro Medium:size=12";
 
 /* colorscheme */
-static const char norm_fg[] = "#d2e9f0";
-static const char norm_bg[] = "#0b0d0a";
-static const char norm_border[] = "#93a3a8";
+static const char norm_fg[] = "#c7c8c8";
+static const char norm_bg[] = "#080F1C";
+static const char norm_border[] = "#8b8c8c";
 
-static const char sel_fg[] = "#d2e9f0";
-static const char sel_bg[] = "#9D9A5D";
-static const char sel_border[] = "#d2e9f0";
+static const char sel_fg[] = "#c7c8c8";
+static const char sel_bg[] = "#943934";
+static const char sel_border[] = "#c7c8c8";
 
 /* default colors */
 static const char col_gray1[]       = "#222222";

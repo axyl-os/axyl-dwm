@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## Get colors -----------------
-FG="#d2e9f0"
-BG="#0b0d0a"
+FG="#c7c8c8"
+BG="#080F1C"
 
 BLACK="#000000"
 RED="#EC7875"

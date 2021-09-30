@@ -7,9 +7,9 @@ DEF_TERM="alacritty --config-file=$HOME/.dwm/alacritty/alacritty.yml"
 DEF_EDITOR="vim"
 
 # colors and font
-BG="#0b0d0a"
-FG="#d2e9f0"
-ALT_BG="#93a3a8"
+BG="#080F1C"
+FG="#c7c8c8"
+ALT_BG="#8b8c8c"
 FONT="Source Code Pro Medium:size=12"
 
 # list of configs
