@@ -99,19 +99,25 @@ static const char *thunarcmd[] = { "thunar", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 
 /* volume controls */
-static const char *upvol[]   = { "volume-up", NULL };
-static const char *downvol[] = { "volume-down", NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
+static const char *upvol[]   = { "volume", "--inc", NULL };
+static const char *downvol[] = { "volume-down", "--dec", NULL };
+static const char *mutevol[] = { "volume", "--toggle", NULL };
 
+/* display brightness controls */
+static const char *upbl[] = { "brightness", "--inc", NULL };
+static const char *downbl[] = { "brightness", "--dec", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
     { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
     { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
     { 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
+  /* No special keys volume controls */
   /*{ MODKEY,                       XK_equal, spawn, {.v = upvol } },
     { MODKEY,                       XK_minus, spawn, {.v = downvol } },
     { MODKEY,                       XK_0, spawn, {.v = mutevol } }, */
+    { 0,                            XF86XK_MonBrightnessUp, spawn, {.v = upbl } },
+    { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = downbl } },
     { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunarcmd } },
     { ALTKEY,                       XK_l,      spawn,          {.v = quicklinks } },
     { ALTKEY,                       XK_e,      spawn,          {.v = editconfigs } },
