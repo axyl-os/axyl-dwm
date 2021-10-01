@@ -15,11 +15,11 @@ FONT="Source Code Pro Medium:size=12"
 # list of configs
 declare -a options=(
 "Feh (Wallpaper Background) - $HOME/.dwm/.fehbg"
-"Picom - $HOME/.config/picom.conf"
+"Picom - $HOME/.dwm/picom.conf"
 "Vim - $HOME/.vimrc"
-"dwm - $HOME/.dwm/config.def.h"
-"dwmblocks - $HOME/.config/dwmblocks/blocks.def.h"
-"dmenu - $HOME/.config/dmenu/config.def.h"
+"dwm - /opt/axyl-dwm/config.def.h"
+"dwmblocks - /opt/axyl-dwmblocks/blocks.def.h"
+"dmenu - /opt/axyl-dmenu/config.def.h"
 "Autostart - $HOME/.dwm/autostart.sh"
 "Fish - $HOME/.config/fish/config.fish"
 )
