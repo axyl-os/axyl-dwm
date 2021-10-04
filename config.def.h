@@ -92,6 +92,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "/opt/axyl-dwm/bin/dwm-dmenu", NULL };
 static const char *j4dmenu[]  = { "/opt/axyl-dwm/bin/dwm-j4-dmenu-desktop", NULL };
+static const char *nmdmenu[] = { "/opt/axyl-dwm/bin/dwm-networkmanager", NULL };
 static const char *termcmd[]  = { "/opt/axyl-dwm/bin/dwm-terminal", "fish", NULL };
 static const char *lockscreen[] = { "/opt/axyl-dwm/bin/dwm-lock", NULL };
 static const char *editconfigs[] = { "/opt/axyl-dwm/bin/dmedit-configs", NULL };
