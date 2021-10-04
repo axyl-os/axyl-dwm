@@ -126,6 +126,7 @@ static Key keys[] = {
     { ALTKEY,                       XK_l,      spawn,          {.v = quicklinks } },
     { ALTKEY,                       XK_e,      spawn,          {.v = editconfigs } },
     { ControlMask|ALTKEY,           XK_l,      spawn,          {.v = lockscreen } },
+    { MODKEY,                       XK_n,      spawn,          {.v = nmdmenu } };
     { ALTKEY,                       XK_F1,     spawn,          {.v = j4dmenu } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
