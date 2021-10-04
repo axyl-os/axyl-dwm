@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+BG="#080F1C"
+FG="#c7c8c8"
+ALT_BG="#8b8c8c"
+
+# configuration of networkmanager-dmenu
+networkmanager_dmenu -c -i -l 10 -fn "Source Code Pro Medium:size=12" -nb "$BG" -nf "$FG" -sb "$ALT_BG" -sf "$FG"
