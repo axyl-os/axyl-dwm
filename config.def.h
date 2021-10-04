@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "firefox",    NULL,       NULL,       2,            0,           -1 },
     { "discord",    NULL,       NULL,       2,            0,           -1 },
     { "Thunar",     NULL,       NULL,       1 << 2,       0,           -1 },
+    { "Rangerfm",   NULL,       NULL,       1 << 2,       0,           -1 },
     { "Pcmanfm",    NULL,       NULL,       1 << 2,       0,           -1 },
     { "Geany",      NULL,       NULL,       1 << 3,       0,           -1 },
     { "Code",       NULL,       NULL,       1 << 3,       0,           -1 },
@@ -97,10 +98,11 @@ static const char *editconfigs[] = { "/opt/axyl-dwm/bin/dmedit-configs", NULL };
 static const char *quicklinks[] = { "/opt/axyl-dwm/bin/dmquick-links", NULL };
 static const char *thunarcmd[] = { "thunar", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
+static const char *rangerfm[] = { "rangerfm", NULL };
 
 /* volume controls */
 static const char *upvol[]   = { "volume", "--inc", NULL };
-static const char *downvol[] = { "volume-down", "--dec", NULL };
+static const char *downvol[] = { "volume", "--dec", NULL };
 static const char *mutevol[] = { "volume", "--toggle", NULL };
 
 /* display brightness controls */
@@ -118,6 +120,7 @@ static Key keys[] = {
     { MODKEY,                       XK_0, spawn, {.v = mutevol } }, */
     { 0,                            XF86XK_MonBrightnessUp, spawn, {.v = upbl } },
     { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = downbl } },
+    { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = rangerfm } },
     { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunarcmd } },
     { ALTKEY,                       XK_l,      spawn,          {.v = quicklinks } },
     { ALTKEY,                       XK_e,      spawn,          {.v = editconfigs } },
@@ -159,7 +162,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
   /*TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)*/
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ ControlMask|ShiftMask,        XK_q,      quit,           {0} },
 };
 
 /* button definitions */
