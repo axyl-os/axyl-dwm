@@ -48,7 +48,6 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Alacritty",  NULL,       NULL,       1,            0,           -1 },
-    { "Viewnior",   NULL,       NULL,       1,            1,           -1 },
 	{ "firefox",    NULL,       NULL,       2,            0,           -1 },
     { "discord",    NULL,       NULL,       2,            0,           -1 },
     { "Thunar",     NULL,       NULL,       1 << 2,       0,           -1 },
@@ -71,9 +70,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "[ Tile ]=",      tile },    /* first entry is default */
+	{ "[ Float ]",      NULL },    /* no layout function means floating behavior */
+	{ "[ Monocle ]",      monocle },
 };
 
 /* key definitions */
@@ -97,32 +96,10 @@ static const char *termcmd[]  = { "/opt/axyl-dwm/bin/dwm-terminal", "fish", NULL
 static const char *lockscreen[] = { "/opt/axyl-dwm/bin/dwm-lock", NULL };
 static const char *editconfigs[] = { "/opt/axyl-dwm/bin/dmedit-configs", NULL };
 static const char *quicklinks[] = { "/opt/axyl-dwm/bin/dmquick-links", NULL };
-static const char *thunarcmd[] = { "thunar", NULL };
-static const char *browsercmd[] = { "firefox", NULL };
-static const char *rangerfm[] = { "rangerfm", NULL };
 
-/* volume controls */
-static const char *upvol[]   = { "volume", "--inc", NULL };
-static const char *downvol[] = { "volume", "--dec", NULL };
-static const char *mutevol[] = { "volume", "--toggle", NULL };
-
-/* display brightness controls */
-static const char *upbl[] = { "brightness", "--inc", NULL };
-static const char *downbl[] = { "brightness", "--dec", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-    { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
-    { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-    { 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
-  /* No special keys volume controls */
-  /*{ MODKEY,                       XK_equal, spawn, {.v = upvol } },
-    { MODKEY,                       XK_minus, spawn, {.v = downvol } },
-    { MODKEY,                       XK_0, spawn, {.v = mutevol } }, */
-    { 0,                            XF86XK_MonBrightnessUp, spawn, {.v = upbl } },
-    { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = downbl } },
-    { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = rangerfm } },
-    { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = thunarcmd } },
     { ALTKEY,                       XK_l,      spawn,          {.v = quicklinks } },
     { ALTKEY,                       XK_e,      spawn,          {.v = editconfigs } },
     { ControlMask|ALTKEY,           XK_l,      spawn,          {.v = lockscreen } },
@@ -130,7 +107,6 @@ static Key keys[] = {
     { ALTKEY,                       XK_F1,     spawn,          {.v = j4dmenu } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -162,8 +138,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
-  /*TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)*/
 	{ ControlMask|ShiftMask,        XK_q,      quit,           {0} },
 };
 

@@ -11,7 +11,10 @@ bash $HOME/.dwm/.fehbg
 dwmblocks &
 
 # kill if already running
-killall -9 picom xfce4-power-manager dunst
+killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd
+
+# start hotkey daemon
+sxhkd &
 
 # Launch notification daemon
 dunst \
