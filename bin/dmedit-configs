@@ -14,6 +14,8 @@ FONT="Source Code Pro Medium:size=12"
 
 # list of configs
 declare -a options=(
+"Alacritty (Fonts) - $HOME/.dwm/alacritty/fonts.yml"
+"Alacritty - $HOME/.dwm/alacritty/alacritty.yml"
 "Feh (Wallpaper Background) - $HOME/.dwm/.fehbg"
 "Picom - $HOME/.dwm/picom.conf"
 "Vim - $HOME/.vimrc"
