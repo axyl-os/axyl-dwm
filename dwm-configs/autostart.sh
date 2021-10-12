@@ -3,12 +3,12 @@
 # sets wallpaper using feh
 bash $HOME/.dwm/.fehbg
 
-# kill if already running
-killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd dwmblocks
-
 # sets superkey
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# kill if already running
+killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd dwmblocks
 
 # starts dwmblocks
 dwmblocks &
