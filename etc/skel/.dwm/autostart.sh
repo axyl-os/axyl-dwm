@@ -19,9 +19,9 @@ sxhkd &
 # Launch notification daemon
 dunst \
 -geom "280x50-10+38" -frame_width "1" -font "Source Code Pro Medium 10" \
--lb "#080F1CFF" -lf "#c7c8c8FF" -lfr "#943934FF" \
--nb "#080F1CFF" -nf "#c7c8c8FF" -nfr "#943934FF" \
--cb "#080F1CFF" -cf "#BF616AFF" -cfr "#BF616AFF" &
+-lb "#1E222AFF" -lf "#ABB2BFFF" -lfr "#56B6C2FF" \
+-nb "#1E222AFF" -nf "#ABB2BFFF" -nfr "#56B6C2FF" \
+-cb "#1E222AFF" -cf "#BF616AFF" -cfr "#BF616AFF" &
 
 # start compositor and power manager
 xfce4-power-manager &
