@@ -1,8 +1,0 @@
-#!/bin/env bash
-
-BG="#080F1C"
-FG="#c7c8c8"
-ALT_BG="#8b8c8c"
-
-# configuration of j4-dmenu-desktop
-j4-dmenu-desktop --no-generic --term="alacritty" --dmenu="dmenu -p 'Run App:' -c -i -l 10 -nb \"$BG\" -nf \"$FG\" -sb \"$ALT_BG\" -sf \"$FG\" -fn 'Source Code Pro Medium:size=12'"
