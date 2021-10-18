@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+# terminal emulator for dwm
+alacritty --config-file $HOME/.dwm/alacritty/alacritty.yml
