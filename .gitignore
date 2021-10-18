@@ -1,0 +1,6 @@
+opt/axyl-dwm/dwm 
+opt/axyl-dwm/config.h
+opt/axyl-dwm/*.o
+opt/axyl-dwm/*.orig
+opt/axyl-dwm/*.rej
+
