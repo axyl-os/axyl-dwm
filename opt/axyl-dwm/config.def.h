@@ -138,7 +138,7 @@ static Key keys[] = {
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
     { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-    { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+    { MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
     { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
     { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
     { MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
@@ -150,7 +150,7 @@ static Key keys[] = {
 
     // overall gaps
     { MODKEY|ControlMask,           XK_i,      incrgaps,       {.i = +1 } },
-    { MODKEY|ControlMask,           XK_d,      incrgaps,       {.i = -1 } },
+    { MODKEY|ControlMask,           XK_u,      incrgaps,       {.i = -1 } },
 
     // inner gaps
     { MODKEY|ShiftMask,                XK_i,      incrigaps,      {.i = +1 } },
