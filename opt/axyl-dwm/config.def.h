@@ -74,6 +74,7 @@ static const Rule rules[] = {
      */
        	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
       	{ "Viewnior", NULL,       NULL,       0,            1,           1,           -1 },
+      	{ "Alafloat", NULL,       NULL,       0,            1,           1,           -1 },
 	{ "Alacritty",NULL,       NULL,       1,            0,           0,           -1 },
 	{ "firefox",  NULL,       NULL,       2,            0,           0,           -1 },
 	{ "discord",  NULL,       NULL,       2,            0,           0,           -1 },
