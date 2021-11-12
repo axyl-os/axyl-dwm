@@ -1,7 +1,5 @@
 #!/bin/env bash
 
-source colors
-
 # sets wallpaper using feh
 bash $HOME/.dwm/.fehbg
 
@@ -19,11 +17,7 @@ dwmblocks &
 sxhkd &
 
 # Launch notification daemon
-dunst \
--geom "280x50-10+38" -frame_width "1" -font "Source Code Pro Medium 10" \
--lb "${bg}FF" -lf "${fg}FF" -lfr "${altbg}FF" \
--nb "${bg}FF" -nf "${fg}FF" -nfr "${altbg}FF" \
--cb "${bg}FF" -cf "#BF616AFF" -cfr "#BF616AFF" &
+dunst -config $HOME/.dwm/dunstrc &
 
 # start compositor and power manager
 xfce4-power-manager &
