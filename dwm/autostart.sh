@@ -4,7 +4,11 @@
 bash $HOME/.dwm/.fehbg
 
 # kill if already running
-killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd dwmblocks
+killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd dwmblocks eww
+
+# Launch Conkeww
+sed -i "s/colors\/color-.*/colors\/color-one-dark.yuck\")/g" $HOME/.config/conkeww/eww.yuck
+eww --config $HOME/.config/conkeww/ open conkeww-main
 
 # sets superkey
 ksuperkey -e 'Super_L=Alt_L|F1' &
