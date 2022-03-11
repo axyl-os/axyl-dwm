@@ -34,11 +34,8 @@ if [[ ! `pidof xfce-polkit` ]]; then
     /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
-# start udiskie
-udiskie &
-
 # replace neovim colorscheme
-sed -i "s/theme =.*$/theme = \"onedark\",/g" $HOME/.config/nvim/lua/chadrc.lua
+sed -i "s/theme =.*$/theme = \"onedark\",/g" $HOME/.config/nvim/lua/custom/chadrc.lua
 
 # change xfce4-terminal colorscheme
 XFCE_TERM_PATH="$HOME/.config/xfce4/terminal"
